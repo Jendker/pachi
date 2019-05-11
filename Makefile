@@ -33,7 +33,7 @@
 # If Caffe is in a custom directory you can set it here.
 
 DCNN=1
-# CAFFE_PREFIX=/usr/local/caffe
+# CAFFE_PREFIX=/usr/local/opt/caffe
 
 # Supported networks:
 # Comment out those you don't need for speed.
@@ -106,8 +106,7 @@ DATADIR ?= $(PREFIX)/share/pachi
 OPT ?= -O3
 COMMON_FLAGS := -Wall -ggdb3 $(OPT) -D_GNU_SOURCE
 CFLAGS       := -std=gnu99 -pthread -Wsign-compare -Wno-format-zero-length
-CXXFLAGS     := -std=c++11
-
+CXXFLAGS     := -std=c++11 -I/usr/local/opt/openblas/include
 
 ##############################################################################
 ### CONFIGURATION END
